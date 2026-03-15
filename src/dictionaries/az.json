@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "about":   "Haqqımızda",
+    "courses": "Kurslar",
+    "method":  "Metodika",
+    "contact": "Əlaqə"
+  },
+  "home": {
+    "hero": {
+      "badge":             "Yeni Kurslar Başlayır",
+      "headingStart":      "Gələcəyinizi",
+      "headingHighlight":  "Kodla",
+      "headingEnd":        "İnşa Edin",
+      "subheading":        "Sıfırdan başlayaraq peşəkar səviyyəyə qədər proqramlaşdırma öyrənin. Real layihələr, təcrübəli mentorlar və karyera dəstəyi ilə hədəflərinizə çatın.",
+      "ctaPrimary":        "İndi Qeydiyyatdan Keç",
+      "ctaSecondary":      "Kurslara Bax",
+      "feature1Title":     "Müasir Texnologiyalar",
+      "feature1Sub":       "React, Next.js, Node.js",
+      "feature2Title":     "Praktiki Təcrübə",
+      "feature2Sub":       "Real layihələr üzərində iş",
+      "socialCount":       "1000+ Tələbə",
+      "socialLabel":       "Bizə qoşuldu"
+    }
+  },
+  "about": {
+    "title": "Haqqımızda"
+  },
+  "contact": {
+    "title":   "Əlaqə",
+    "name":    "Ad",
+    "email":   "E-poçt",
+    "message": "Mesaj",
+    "submit":  "Göndər",
+    "success": "Mesajınız göndərildi!"
+  },
+  "footer": {
+    "rights": "Bütün hüquqlar qorunur."
+  }
+}

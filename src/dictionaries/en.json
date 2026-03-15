@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "about":   "About",
+    "courses": "Courses",
+    "method":  "Methodology",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "badge":            "New Courses Starting",
+      "headingStart":     "Build Your Future",
+      "headingHighlight": "With Code",
+      "headingEnd":       "",
+      "subheading":       "Learn programming from scratch to professional level. Reach your goals with real projects, experienced mentors and career support.",
+      "ctaPrimary":       "Register Now",
+      "ctaSecondary":     "View Courses",
+      "feature1Title":    "Modern Technologies",
+      "feature1Sub":      "React, Next.js, Node.js",
+      "feature2Title":    "Practical Experience",
+      "feature2Sub":      "Work on real projects",
+      "socialCount":      "1000+ Students",
+      "socialLabel":      "Joined us"
+    }
+  },
+  "about": {
+    "title": "About Us"
+  },
+  "contact": {
+    "title":   "Contact",
+    "name":    "Name",
+    "email":   "Email",
+    "message": "Message",
+    "submit":  "Send",
+    "success": "Your message has been sent!"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

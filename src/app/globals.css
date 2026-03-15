@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+html {
+  scroll-smooth: always;
+  scroll-behavior: smooth;
+}
+
+/* Navbar-ın hündürlüyünü nəzərə alaraq anchor linklərin yerini tənzimləmək üçün */
+.scroll-mt-20 {
+  scroll-margin-top: 5rem; /* 80px navbar hündürlüyü */
+}
