@@ -1,119 +1,156 @@
+"use client";
+
+import { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, Code2, Layers } from "lucide-react";
 
-interface HeroDict {
-  badge: string;
-  headingStart: string;
-  headingHighlight: string;
-  headingEnd: string;
-  subheading: string;
-  ctaPrimary: string;
-  ctaSecondary: string;
-  feature1Title: string;
-  feature1Sub: string;
-  feature2Title: string;
-  feature2Sub: string;
-  socialCount: string;
-  socialLabel: string;
-}
+export function HomeHero({ dict, lang }: { dict: any; lang: string }) {
+  const [index, setIndex] = useState(0);
+  const [isFinal, setIsFinal] = useState(false);
 
-export function HomeHero({ dict, lang }: { dict: HeroDict; lang: string }) {
+  const messages = useMemo(() => [
+    dict?.chaoticSection?.msg1 || "Gələcəyi gözləmə, onu sən yaz!",
+    dict?.chaoticSection?.msg2 || "Bizə güvənlər artıq karyerasına başlayıb",
+    dict?.chaoticSection?.msg3 || "İndi sıra sənindir!"
+  ], [dict]);
+
+  const finalMessage =
+    dict?.chaoticSection?.finalMessage ||
+    "Sıfırdan başlayaraq peşəkar səviyyəyə qədər proqramlaşdırma öyrənin. Real layihələr, təcrübəli mentorlar və karyera dəstəyi ilə hədəflərinizə çatın.";
+
+  useEffect(() => {
+    let timer: any;
+    if (!isFinal) {
+      timer = setInterval(() => {
+        setIndex((prev) => {
+          if (prev === messages.length - 1) {
+            setIsFinal(true);
+            return prev;
+          }
+          return prev + 1;
+        });
+      }, 4500);
+    } else {
+      // Final cümlədə dövrü dayandırırıq ki, istifadəçi düyməyə basa bilsin
+      // Əgər yenidən başlasın istəyirsənsə, bura setTimeout əlavə edə bilərik
+    }
+    return () => clearInterval(timer);
+  }, [isFinal, messages.length]);
+
+  const randomPositions = useMemo(() => {
+    return Array.from({ length: 300 }).map(() => ({
+      x: (Math.random() - 0.5) * 1000,
+      y: (Math.random() - 0.5) * 800,
+      rotate: (Math.random() - 0.5) * 180,
+    }));
+  }, []);
+
+  const letterVariants = {
+    initial: (i: number) => ({
+      opacity: 0,
+      x: randomPositions[i % 300].x,
+      y: randomPositions[i % 300].y,
+      rotate: randomPositions[i % 300].rotate,
+      scale: 2,
+      filter: "blur(12px)", 
+    }),
+    animate: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.8,
+        delay: i * 0.015,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    }),
+    exit: (i: number) => ({
+      opacity: 0,
+      x: 100,
+      filter: "blur(8px)",
+      transition: { duration: 0.5, delay: i * 0.008 },
+    }),
+  };
+
   return (
-    <section className=" min-h-[calc(100vh-64px)] bg-gradient-to-br from-slate-50 via-blue-50/40 to-white flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative w-full h-screen flex items-center justify-center bg-white overflow-hidden">
+      
+      {/* BACKGROUND DECOR */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] bg-brand-cyan/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[-5%] right-[-5%] w-[45%] h-[55%] bg-brand-navy/5 rounded-full blur-[120px]" />
+      </div>
 
-          {/* LEFT */}
-          <div className="flex flex-col gap-6">
-
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm text-gray-600 font-medium">{dict.badge}</span>
-            </div>
-
-            {/* Heading */}
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              {dict.headingStart}{" "}
-              <span className="text-blue-600">{dict.headingHighlight}</span>{" "}
-              {dict.headingEnd}
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-lg text-gray-500 leading-relaxed max-w-md">
-              {dict.subheading}
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Link
-                href={`/${lang}/courses`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200"
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
+        <AnimatePresence mode="wait">
+          {!isFinal ? (
+            <motion.h1
+              key="messages"
+              className="text-center font-black text-slate-900 leading-[1.1] tracking-tighter flex flex-wrap justify-center items-center text-4xl md:text-7xl lg:text-[90px] px-4"
+            >
+              {messages[index].split(" ").map((word, wIdx) => (
+                <span key={wIdx} className="flex mx-[0.15em]">
+                  {word.split("").map((char, cIdx) => (
+                    <motion.span
+                      key={cIdx}
+                      custom={cIdx + wIdx * 8}
+                      variants={letterVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      className="inline-block will-change-[transform,filter,opacity]"
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
+              ))}
+            </motion.h1>
+          ) : (
+            <motion.div 
+              key="final-container"
+              className="flex flex-col items-center text-center px-6"
+            >
+              {/* FINAL CÜMLƏ */}
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="text-2xl md:text-5xl lg:text-[48px] font-black text-slate-900 max-w-5xl leading-[1.2] tracking-tight mb-12"
               >
-                {dict.ctaPrimary}
-              </Link>
-              <Link
-                href={`/${lang}/courses`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border border-gray-200 text-gray-700 font-semibold text-sm hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                {finalMessage}
+              </motion.h2>
+
+              {/* QƏŞƏNG DEMO DƏRS BUTONU */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
               >
-                {dict.ctaSecondary}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Features */}
-            <div className="flex flex-wrap gap-6 pt-2">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                  <Code2 className="w-4 h-4 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-gray-800">{dict.feature1Title}</p>
-                  <p className="text-xs text-gray-400">{dict.feature1Sub}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                  <Layers className="w-4 h-4 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-gray-800">{dict.feature2Title}</p>
-                  <p className="text-xs text-gray-400">{dict.feature2Sub}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="relative hidden lg:block">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-100 aspect-[4/3] bg-slate-800">
-              <img
-                src="/hero-image.jpg"
-                alt="Proqramlaşdırma"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Floating card */}
-            <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-xl border border-gray-100 px-4 py-3 flex items-center gap-3">
-              <div className="flex -space-x-2">
-                {["bg-blue-500", "bg-blue-400", "bg-blue-300"].map((bg, i) => (
-                  <div
-                    key={i}
-                    className={`w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold ${bg}`}
-                  >
-                    {["A", "B", "C"][i]}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <p className="text-sm font-bold text-gray-900">{dict.socialCount}</p>
-                <p className="text-xs text-gray-400">{dict.socialLabel}</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+                <Link
+                  href={`/${lang}/contact`}
+                  className="group relative inline-flex items-center gap-4 px-10 py-5 bg-brand-navy text-white rounded-2xl font-black text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_-10px_rgba(15,60,102,0.4)]"
+                >
+                  {/* Buton daxili parıltı effekti */}
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  
+                  <Sparkles size={24} className="text-brand-cyan animate-pulse" />
+                  Ödənişsiz Demo Dərs
+                  <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
+                
+                <p className="mt-4 text-slate-400 font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                  Qeydiyyat hazırda aktivdir
+                </p>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

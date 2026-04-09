@@ -1,36 +1,112 @@
 {
   "nav": {
-    "about":   "About",
+    "about": "About Us",
     "courses": "Courses",
-    "method":  "Methodology",
+    "method": "Methodology",
     "contact": "Contact"
   },
   "home": {
     "hero": {
-      "badge":            "New Courses Starting",
-      "headingStart":     "Build Your Future",
-      "headingHighlight": "With Code",
-      "headingEnd":       "",
-      "subheading":       "Learn programming from scratch to professional level. Reach your goals with real projects, experienced mentors and career support.",
-      "ctaPrimary":       "Register Now",
-      "ctaSecondary":     "View Courses",
-      "feature1Title":    "Modern Technologies",
-      "feature1Sub":      "React, Next.js, Node.js",
-      "feature2Title":    "Practical Experience",
-      "feature2Sub":      "Work on real projects",
-      "socialCount":      "1000+ Students",
-      "socialLabel":      "Joined us"
+      "badge": "New Courses Starting",
+      "headingStart": "Build Your",
+      "headingHighlight": "Future",
+      "headingEnd": "With Code",
+      "subheading": "Learn programming from scratch to professional level. Reach your goals with real projects, experienced mentors, and career support.",
+      "ctaPrimary": "Register Now",
+      "ctaSecondary": "View Courses",
+      "feature1Title": "Modern Technologies",
+      "feature1Sub": "React, Next.js, Node.js",
+      "feature2Title": "Practical Experience",
+      "feature2Sub": "Work on real projects",
+      "socialCount": "1000+ Students",
+      "socialLabel": "Joined us"
+    },
+    "about_section": {
+      "badge": "ABOUT US",
+      "title": "We are educating the",
+      "title_highlight": "Programmers of Future",
+      "description": "We create an innovative and accessible learning environment for everyone who wants to build a successful career in the technology world. We help you reach your goals with modern teaching methodologies and professional mentors.",
+      "mission_title": "Our Mission",
+      "mission_desc": "To provide programming education at global standards.",
+      "vision_title": "Our Vision",
+      "vision_desc": "To prepare leading experts in the technology field.",
+      "btn_contact": "Get in Touch",
+      "btn_courses": "View Courses",
+      "stats_label": "SUCCESSFUL GRADUATE"
+    },
+    "methodology": {
+      "badge": "OUR TEACHING METHODOLOGY",
+      "title": "How We Prepare the",
+      "title_highlight": "Future Programmers?",
+      "description": "Our teaching method is not just about teaching how to write code, it's also about forming an engineering mindset.",
+      "features": [
+        {
+          "title": "Practice-Based Learning",
+          "desc": "Master coding deeply by combining theory with real-world projects.",
+          "icon": "code"
+        },
+        {
+          "title": "Mentor Support",
+          "desc": "Get individual feedback and constant guidance from professional programmers.",
+          "icon": "users"
+        },
+        {
+          "title": "Algorithmic Thinking",
+          "desc": "Develop your analytical skills to solve complex problems.",
+          "icon": "brain"
+        }
+      ],
+      "btn_explore": "Explore Our Method",
+      "success_label": "GRADUATE SUCCESS",
+      "success_rate": "92% Employment Rate"
+    },
+    "why_choose_us": {
+      "badge": "OUR ADVANTAGES",
+      "title": "Why Choose Us?",
+      "description": "We don't just teach coding, we prepare you to be a technology leader. Our method is focused on results.",
+      "features": [
+        {
+          "icon": "award",
+          "tag": "Official",
+          "title": "International Certificate",
+          "desc": "Get an internationally recognized certificate after successful completion and strengthen your CV."
+        },
+        {
+          "icon": "briefcase",
+          "tag": "Guaranteed",
+          "title": "Career Support",
+          "desc": "Start your career strong with interview prep, CV design, and job opportunities in partner companies."
+        },
+        {
+          "icon": "users",
+          "title": "Strong Community",
+          "desc": "Join an active community of experienced developers and students, find answers to your questions instantly."
+        },
+        {
+          "icon": "layout-grid",
+          "title": "Real Projects",
+          "desc": "Don't settle for theory. Gain experience by working on real-world projects for your portfolio."
+        },
+        {
+          "icon": "zap",
+          "tag": "24/7",
+          "title": "Mentor Support",
+          "desc": "Connect directly with professional mentors who will guide you every step of the way."
+        },
+        {
+          "icon": "infinity",
+          "title": "Lifetime Access",
+          "desc": "Get lifetime access to lessons and updated materials. Your learning never stops."
+        }
+      ]
     }
   },
-  "about": {
-    "title": "About Us"
-  },
   "contact": {
-    "title":   "Contact",
-    "name":    "Name",
-    "email":   "Email",
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
     "message": "Message",
-    "submit":  "Send",
+    "submit": "Submit",
     "success": "Your message has been sent!"
   },
   "footer": {

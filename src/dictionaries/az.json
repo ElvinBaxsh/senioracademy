@@ -20,10 +20,125 @@
       "feature2Sub":       "Real layihələr üzərində iş",
       "socialCount":       "1000+ Tələbə",
       "socialLabel":       "Bizə qoşuldu"
-    }
+    },
+    "chaoticSection": {
+  "msg1": "Onlar bizə güvəndi… nəticə aldı.",
+  "msg2": "Onların seçimi təsadüfi deyildi.",
+  "msg3": "Onlar başladı… indi qazanır.",
+  "msg4": "Onlar dəyişdi… sən də dəyiş.",
+  "msg5": "Onlar artıq başladı… sən hələ düşünürsən?",
+  "msg6": "Bu yolu seçənlər uduzmur.",
+  "finalMessage": "Sıfırdan başlayaraq peşəkar səviyyəyə qədər proqramlaşdırma öyrənin. Real layihələr, təcrübəli mentorlar və karyera dəstəyi ilə hədəflərinizə çatın."
+},
+    "about_section": {
+      "badge": "HAQQIMIZDA",
+      "title": "Gələcəyin Proqramçılarını",
+      "title_highlight": "Yetişdiririk",
+      "description": "Biz, texnologiya dünyasında uğurlu karyera qurmaq istəyən hər kəs üçün innovativ və əlçatan təhsil mühiti yaradırıq. Müasir tədris metodikamız və peşəkar mentorlarımızla hədəflərinizə çatmanıza kömək edirik.",
+      "mission_title": "Missiyamız",
+      "mission_desc": "Qlobal standartlara uyğun proqramlaşdırma təhsili vermək.",
+      "vision_title": "Vizyonumuz",
+      "vision_desc": "Texnologiya sahəsində lider mütəxəssislər hazırlamaq.",
+      "btn_contact": "Bizimlə Tanış Olun",
+      "btn_courses": "Kursa Baxış",
+      "stats_label": "UĞURLU MƏZUN"
+    },
+    "methodology": {
+    "badge": "TƏDRİS METODOLOGİYAMIZ",
+    "title": "Gələcəyin Proqramçılarını",
+    "title_highlight": "Necə Hazırlayırıq?",
+    "description": "Bizim tədris metodumuz sadəcə kod yazmağı öyrətmək deyil, həm də mühəndis kimi düşünməyi formalaşdırmaq üzərində qurulub.",
+    "features": [
+      {
+        "title": "Təcrübə Əsaslı Öyrənmə",
+        "desc": "Nəzəriyyəni real layihələrlə birləşdirərək kodlaşdırmanı dərindən mənimsəyin.",
+        "icon": "code"
+      },
+      {
+        "title": "Mentor Dəstəyi",
+        "desc": "Peşəkar proqramçılardan fərdi rəy və daimi istiqamət əldə edin.",
+        "icon": "users"
+      },
+      {
+        "title": "Alqoritmik Düşüncə",
+        "desc": "Mürəkkəb problemləri həll etmək üçün analitik bacarıqlarınızı inkişaf etdirin.",
+        "icon": "brain"
+      }
+    ],
+    "btn_explore": "Tədris Metodumuzu Kəşf Edin",
+    "success_label": "MƏZUN UĞURU",
+    "success_rate": "92% İşlə Təmin Olunma"
+  },"why_choose_us": {
+    "badge": "ÜSTÜNLÜKLƏRİMİZ",
+    "title": "Niyə Bizi Seçməlisiniz?",
+    "description": "Biz sadəcə kod yazmağı öyrətmirik, biz sizi gələcəyin texnologiya lideri olmağa hazırlayırıq. Tədris metodumuz nəticəyə fokuslanıb.",
+    "features": [
+      {
+        "icon": "award",
+        "tag": "Rəsmi",
+        "title": "Beynəlxalq Sertifikat",
+        "desc": "Kursu uğurla bitirdikdən sonra beynəlxalq səviyyədə tanınan sertifikat əldə edin və CV-nizi gücləndirin."
+      },
+      {
+        "icon": "briefcase",
+        "tag": "Zəmanətli",
+        "title": "Karyera Dəstəyi",
+        "desc": "Müsahibəyə hazırlıq, CV tərtibatı və tərəfdaş şirkətlərdə iş imkanları ilə karyeranıza güclü başlanğıc edin."
+      },
+      {
+        "icon": "users",
+        "title": "Güclü İcma",
+        "desc": "Təcrübəli proqramçılar və tələbələrdən ibarət aktiv icmaya qoşulun, suallarınıza dərhal cavab tapın."
+      },
+      {
+        "icon": "layout-grid",
+        "title": "Real Layihələr",
+        "desc": "Nəzəriyyə ilə kifayətlənməyin. Portfeliniz üçün real dünya layihələri üzərində işləyərək təcrübə qazanın."
+      },
+      {
+        "icon": "zap",
+        "tag": "7/24",
+        "title": "Mentor Dəstəyi",
+        "desc": "Hər addımda sizə rəhbərlik edəcək peşəkar mentorlarla birbaşa əlaqə qurun və inkişafınızı sürətləndirin."
+      },
+      {
+        "icon": "infinity",
+        "title": "Ömürlük Giriş",
+        "desc": "Dərslərə və yenilənən materiallara ömür boyu giriş əldə edin. Öyrənmə prosesiniz heç vaxt dayanmasın."
+      }
+    ]
   },
-  "about": {
-    "title": "Haqqımızda"
+  "cta_section": {
+  "badge": "DƏSTƏK MƏRKƏZİ",
+  "title": "Hələ də suallarınız var?",
+  "description": "Peşəkar proqramlaşdırma kurslarımız, tədris metodikamız və ya karyera imkanları barədə ətraflı məlumat almaq üçün komandamızla əlaqə saxlayın.",
+  "btn_text": "Bizimlə Əlaqə",
+  "footer_note": "Adətən 24 saat ərzində geri dönüş edirik",
+  "feature1": "Sürətli cavablandırma",
+  "feature2": "Ödənişsiz konsultasiya"
+},
+"salary_calc": {
+  "badge": "KARYERA PLANI",
+  "title": "Gələcək Qazancınızı Hesablayın",
+  "description": "Sahəni və səviyyəni seçin, Senior.az ilə digər öyrənmə metodları arasındakı fərqi rəqəmlərlə görün.",
+  "label_track": "İstiqamət",
+  "label_level": "Səviyyə",
+  "label_method": "Öyrənmə Metodu",
+  "methods": {
+    "self": "Özün Öyrənmə",
+    "others": "Digər Kurslar",
+    "senior": "Senior.az Tədrisi"
+  },
+  "result_title": "Təxmini Aylıq Maaş",
+  "note": "Bazar araşdırmasına əsaslanan orta göstəricilərdir.",
+  "label_experience": "İş Təcrübəsi (İl)",
+  "experience_suffix": "il təcrübə"
+},"salary_calc": {
+  "roi_label": "İnvestisiyanın Geri Dönüşü",
+  "roi_sub": "Təhsil xərclərinin maaşla ödənilmə müddəti",
+  "roles_label": "Sizi gözləyən gələcək vəzifələr",
+  "btn_start": "Bu hədəfə doğru başla"
+}
   },
   "contact": {
     "title":   "Əlaqə",

@@ -9,3 +9,8 @@ html {
 .scroll-mt-20 {
   scroll-margin-top: 5rem; /* 80px navbar hündürlüyü */
 }
+
+@theme {
+  --color-brand-navy: #0F3C66;
+  --color-brand-cyan: #62CCCA;
+}
